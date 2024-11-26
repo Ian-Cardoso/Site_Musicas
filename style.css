@@ -1,0 +1,87 @@
+body{
+    background: linear-gradient(45deg, #1e1e2f, #6e7893);
+
+
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    grid-template-areas: 'disco'
+                         'audio';
+    align-content: space-evenly;
+}
+
+.box{
+    height: 300px;
+    width: 300px;
+    animation-name: spin; 
+    animation-iteration-count: infinite;
+    animation-duration: 11s;
+    animation-timing-function: linear;
+    text-align: center;
+    border-radius: 50%;
+    scale: 1.3;
+    border: 5px solid #3e438d;
+
+}
+
+p{
+    text-align: center;
+    color: white;
+}
+
+img{
+    grid-area: disco;
+    border-radius: 50%;
+}
+
+@keyframes spin{
+    0%{
+
+    }
+
+    100%{
+        transform: rotate(360deg)
+    }
+}
+
+audio{
+    grid-area: audio;
+    transform: translateY(-100px);
+    border: #3e438d 5px solid;
+    border-radius: 30px;
+}
+
+@media (max-width: 1024px) {
+    .box{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 425px){
+
+    .box{
+        height: 250px;
+        width: 250px;
+        margin-bottom: 0;
+    }
+
+    img{
+        height: 250px;
+        width: 250px;
+    }
+
+    audio{
+        width: 90%;
+    }
+
+}
+
+
+
